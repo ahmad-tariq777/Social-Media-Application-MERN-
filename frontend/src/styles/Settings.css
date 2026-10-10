@@ -1,0 +1,64 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.settings-section {
+  padding: var(--s-2) var(--s-4) var(--s-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface);
+}
+
+.settings-section h3 {
+  padding: var(--s-3) 0 var(--s-2);
+  font-size: var(--fs-md);
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.settings-row span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-row small {
+  color: var(--text-2);
+}
+
+.settings-row input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.settings-page .logout-btn {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-4);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  background: var(--surface);
+  color: var(--red);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.settings-page .logout-btn:hover {
+  background: var(--surface-2);
+}

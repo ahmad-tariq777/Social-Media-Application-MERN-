@@ -1,0 +1,57 @@
+.upload-reel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.upload-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-8) var(--s-4);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-3);
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.upload-drop:hover {
+  border-color: var(--ink);
+  color: var(--text);
+}
+
+.upload-drop svg {
+  font-size: 26px;
+}
+
+.upload-preview {
+  width: 100%;
+  max-height: 280px;
+  border-radius: var(--r-2);
+  background: #000;
+}
+
+.upload-reel textarea {
+  min-height: 84px;
+}
+
+.upload-reel .primary-btn {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.progress {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-2);
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-align: center;
+}

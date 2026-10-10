@@ -1,0 +1,39 @@
+.followers-page {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.followers-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+
+.followers-list {
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface);
+}
+
+.follower-card {
+  padding: 0 var(--s-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.follower-card:last-child {
+  border-bottom: 0;
+}
+
+.follower-card .remove-btn {
+  padding: 7px var(--s-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.follower-card .remove-btn:hover {
+  background: var(--surface-2);
+}

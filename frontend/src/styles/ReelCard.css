@@ -1,0 +1,136 @@
+.reel-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: calc(100vh - 120px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--r-3);
+  background: #000;
+  color: #fff;
+}
+
+.reel-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.mute-btn {
+  position: absolute;
+  top: var(--s-3);
+  right: var(--s-3);
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+}
+
+.reel-card .overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--s-10) var(--s-3) var(--s-4);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  pointer-events: none;
+}
+
+.reel-card .info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--s-2);
+  min-width: 0;
+  pointer-events: auto;
+}
+
+.reel-author {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-weight: 600;
+}
+
+.reel-author:hover {
+  text-decoration: underline;
+}
+
+.reel-card .caption {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow-wrap: anywhere;
+}
+
+.reel-card .hashtag,
+.reel-card .mention {
+  color: #fff;
+  font-weight: 700;
+}
+
+.reel-views {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--fs-xs);
+  opacity: 0.85;
+}
+
+.reel-card .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+  margin-left: var(--s-3);
+  pointer-events: auto;
+}
+
+.reel-card .icon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.reel-card .icon-btn.liked {
+  color: #ff5a6a;
+}
+
+.reel-card .icon-btn.delete-btn:hover {
+  color: #ff7b86;
+}
+
+.reel-card :focus-visible {
+  outline-color: #fff;
+}

@@ -1,0 +1,27 @@
+.following-page {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.following-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+
+.following-list {
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface);
+}
+
+.following-card {
+  padding: 0 var(--s-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.following-card:last-child {
+  border-bottom: 0;
+}

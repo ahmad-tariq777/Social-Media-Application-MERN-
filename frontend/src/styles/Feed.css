@@ -1,0 +1,27 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  width: 100%;
+  max-width: var(--col);
+  margin: 0 auto;
+}
+
+.loading,
+.no-posts,
+.end {
+  padding: var(--s-4);
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+  text-align: center;
+}
+
+.content-detail .back-btn {
+  align-self: flex-start;
+}
+
+.single-reel {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}

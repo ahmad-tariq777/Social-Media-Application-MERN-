@@ -1,0 +1,57 @@
+.reels-feed {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.reels-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.reels-tabs {
+  display: flex;
+  gap: var(--s-4);
+}
+
+.reels-tabs button {
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.reels-tabs button:hover {
+  color: var(--text);
+}
+
+.reels-tabs button.active {
+  border-color: var(--ink);
+  color: var(--text);
+}
+
+.upload-reel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px var(--s-3);
+  border-radius: var(--r-2);
+  background: var(--ink);
+  color: var(--on-ink);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.upload-reel-btn:hover {
+  background: var(--ink-hover);
+}
+
+.reels-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}

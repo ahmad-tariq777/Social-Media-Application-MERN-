@@ -1,0 +1,128 @@
+.notifications-page {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.notifications-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.notifications-header h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.notifications-actions {
+  display: flex;
+  gap: var(--s-2);
+}
+
+.notifications-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px var(--s-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  background: var(--surface);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.notifications-actions button:hover:not(:disabled) {
+  background: var(--surface-2);
+}
+
+.notifications-list {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface);
+}
+
+.notifications-list:empty {
+  display: none;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.notification-item:last-child {
+  border-bottom: 0;
+}
+
+.notification-item.unread {
+  background: var(--bg);
+  box-shadow: inset 3px 0 0 var(--ink);
+}
+
+.notification-main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--s-3);
+  min-width: 0;
+  padding: var(--s-3) var(--s-4);
+  cursor: pointer;
+}
+
+.notification-text {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.notification-time {
+  color: var(--text-3);
+  font-size: var(--fs-xs);
+}
+
+.notification-thumb {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-1);
+  object-fit: cover;
+}
+
+.notification-remove {
+  display: grid;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: var(--s-3);
+  place-items: center;
+  border-radius: var(--r-2);
+  color: var(--text-3);
+}
+
+.notification-remove:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.notification-requests {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--s-2);
+  padding-right: var(--s-4);
+}
+
+@media (max-width: 480px) {
+  .notification-requests {
+    flex-direction: column;
+    padding-right: var(--s-3);
+  }
+}

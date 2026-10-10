@@ -1,0 +1,203 @@
+:root {
+  --bg: #f6f6f6;
+  --surface: #ffffff;
+  --surface-2: #f0f0f0;
+  --surface-3: #e6e6e6;
+  --line: #e3e3e3;
+  --line-strong: #c9c9c9;
+  --text: #111111;
+  --text-2: #555555;
+  --text-3: #6a6a6a;
+  --ink: #000000;
+  --on-ink: #ffffff;
+  --ink-hover: #2a2a2a;
+  --red: #d62839;
+  --link: #1f4fbf;
+  --online: #2f9e5f;
+  --success: #1e7a45;
+
+  --font: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-md: 0.9375rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+
+  --r-1: 4px;
+  --r-2: 6px;
+  --r-3: 8px;
+  --r-4: 12px;
+
+  --shadow-1: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  --nav-h: 56px;
+  --col: 600px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+h4 {
+  font-size: var(--fs-md);
+}
+
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: var(--fs-sm);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where(button) {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+:where(button:disabled) {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+:where(
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+    textarea,
+    select
+  ) {
+  width: 100%;
+  min-width: 0;
+  padding: 9px var(--s-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.4;
+  outline: none;
+}
+
+:where(textarea) {
+  resize: vertical;
+}
+
+:where(
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+    textarea,
+    select
+  ):focus {
+  border-color: var(--ink);
+}
+
+:where(input, textarea)::placeholder {
+  color: var(--text-3);
+  opacity: 1;
+}
+
+:where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
+  accent-color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+:where(
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+    textarea,
+    select
+  ):focus-visible {
+  outline: none;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

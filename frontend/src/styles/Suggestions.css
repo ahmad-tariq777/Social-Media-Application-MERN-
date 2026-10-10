@@ -1,0 +1,54 @@
+.suggestions-page {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.suggestions-page h2 {
+  margin-bottom: var(--s-4);
+}
+
+.suggestions-search {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-bottom: var(--s-4);
+  padding: 0 var(--s-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  background: var(--surface);
+  color: var(--text-3);
+}
+
+.suggestions-search:focus-within {
+  border-color: var(--ink);
+}
+
+.suggestions-search input {
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+}
+
+.suggestions-grid {
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface);
+}
+
+.suggestion-card {
+  padding: 0 var(--s-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.suggestion-card:last-child {
+  border-bottom: 0;
+}
+
+.suggestions-loading,
+.no-suggestions {
+  padding: var(--s-6) var(--s-4);
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+  text-align: center;
+}

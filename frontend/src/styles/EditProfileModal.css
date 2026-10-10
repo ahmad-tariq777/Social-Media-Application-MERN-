@@ -1,0 +1,157 @@
+.modal.edit-profile-modal {
+  display: block;
+  max-width: 520px;
+  padding: var(--s-6);
+  overflow-y: auto;
+}
+
+.edit-profile-modal h3 {
+  margin-bottom: var(--s-4);
+}
+
+.edit-profile-modal label {
+  display: block;
+  margin: var(--s-4) 0 6px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.edit-profile-modal .upload-section label:first-child {
+  margin-top: 0;
+}
+
+.upload-section {
+  margin-bottom: var(--s-4);
+}
+
+.image-picker {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.preview-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.preview-img.cover {
+  width: 144px;
+  height: 48px;
+  border-radius: var(--r-2);
+}
+
+.edit-profile-modal .pick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 7px var(--s-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-profile-modal .pick-btn:hover {
+  background: var(--surface-2);
+}
+
+.edit-profile-modal .delete-btn {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: var(--r-2);
+  color: var(--text-2);
+}
+
+.edit-profile-modal .delete-btn:hover {
+  background: var(--surface-2);
+  color: var(--red);
+}
+
+.edit-profile-modal textarea {
+  min-height: 84px;
+}
+
+.edit-profile-modal .check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit-profile-modal .modal-actions {
+  margin-top: var(--s-6);
+}
+
+.uploading-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--surface-3);
+  border-top-color: var(--ink);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.crop-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+.crop-container {
+  position: relative;
+  flex: 1;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  background: var(--surface);
+}
+
+.crop-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s-2);
+}
+
+.crop-buttons button {
+  padding: var(--s-2) var(--s-5);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.crop-buttons button:first-child {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--on-ink);
+}
