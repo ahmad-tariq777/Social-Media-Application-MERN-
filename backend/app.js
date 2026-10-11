@@ -4,6 +4,7 @@ import helmet from "helmet";
 import compression from "compression";
 import rateLimit from "express-rate-limit";
 import connectDB from "./config/db.js";
+import { corsOrigin } from "./utils/origins.js";
 import { notFound, errorHandler } from "./middlewares/errorHandler.js";
 
 import authRoutes from "./routes/authRoutes.js";
@@ -21,13 +22,6 @@ import searchRoutes from "./routes/searchRoutes.js";
 
 const app = express();
 
-const origins = (
-  process.env.CLIENT_URLS ||
-  "http://localhost:3000,http://localhost:5173"
-)
-  .split(",")
-  .map((s) => s.trim());
-
 app.set("trust proxy", 1);
 
 app.use(helmet({ crossOriginResourcePolicy: false }));
@@ -35,9 +29,11 @@ app.use(compression());
 
 app.use(
   cors({
-    origin: origins,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    origin: corsOrigin,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
+    optionsSuccessStatus: 204,
   })
 );
 

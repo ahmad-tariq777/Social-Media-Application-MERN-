@@ -2,13 +2,12 @@ import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 import Chat from "../models/Chat.js";
+import { corsOrigin } from "../utils/origins.js";
 import { setIO, addOnline, removeOnline, onlineIds, emitToUser } from "../utils/socketStore.js";
-
-const origins = () => (process.env.CLIENT_URLS || "http://localhost:3000,http://localhost:5173").split(",").map((s) => s.trim());
 
 export const initSocket = (server) => {
   const io = new Server(server, {
-    cors: { origin: origins(), methods: ["GET", "POST"], credentials: true },
+    cors: { origin: corsOrigin, methods: ["GET", "POST"], credentials: true },
   });
   setIO(io);
 

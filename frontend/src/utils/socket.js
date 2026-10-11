@@ -1,7 +1,11 @@
 import { io } from "socket.io-client";
 import { API_URL } from "../config";
 
-export const socket = io(API_URL, { autoConnect: false });
+export const socket = io(API_URL, {
+  autoConnect: false,
+  reconnectionAttempts: 5,
+  reconnectionDelayMax: 10000,
+});
 
 export const connectSocket = () => {
   const token = localStorage.getItem("token");
