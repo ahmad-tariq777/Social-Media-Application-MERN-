@@ -66,6 +66,14 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    message: "Social Media API is running",
+    health: "/api/health",
+  });
+});
+
 app.get("/api/health", (req, res) => {
   res.status(200).json({
     status: "ok",
