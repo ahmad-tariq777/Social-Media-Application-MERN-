@@ -1,0 +1,2 @@
+backend   https://social-media-application-mern.vercel.app/
+frontend https://social-media-application-mern-uefw.vercel.app/login

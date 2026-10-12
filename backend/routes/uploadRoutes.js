@@ -14,14 +14,14 @@ router.get("/signature", (req, res) => {
   const folder = "social_media/direct";
   const signature = cloudinary.utils.api_sign_request(
     { timestamp, folder },
-    process.env.CLOUDINARY_API_SECRET
+    cloudinary.config().api_secret
   );
   res.json({
     timestamp,
     folder,
     signature,
-    apiKey: process.env.CLOUDINARY_API_KEY,
-    cloudName: process.env.CLOUDINARY_NAME,
+    apiKey: cloudinary.config().api_key,
+    cloudName: cloudinary.config().cloud_name,
   });
 });
 

@@ -1,9 +1,24 @@
+import dotenv from "dotenv";
 import { v2 as cloudinary } from "cloudinary";
 
+dotenv.config();
+
+const clean = (v) => (v || "").trim().replace(/^["']|["']$/g, "");
+
+const cloudName = clean(process.env.CLOUDINARY_NAME);
+const apiKey = clean(process.env.CLOUDINARY_API_KEY);
+const apiSecret = clean(process.env.CLOUDINARY_API_SECRET);
+
+if (!cloudName || !apiKey || !apiSecret) {
+  console.error("Cloudinary credentials are missing");
+} else if (apiSecret.length !== 27) {
+  console.error(`CLOUDINARY_API_SECRET has ${apiSecret.length} characters, expected 27. Copy it again from the Cloudinary dashboard.`);
+}
+
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: cloudName,
+  api_key: apiKey,
+  api_secret: apiSecret,
   secure: true,
 });
 
